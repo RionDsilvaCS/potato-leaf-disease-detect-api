@@ -6,7 +6,7 @@ from tensorflow.keras.models import load_model
 from PIL import Image
 from numpy import asarray
 import numpy as np
-import os
+
 
 app = FastAPI()
 
@@ -38,7 +38,7 @@ async def predict(image_f: UploadFile):
     img = np_img[None,:,:,:]
     pred = model.predict(img)
    
-    os.remove(file_path)
+    # os.remove(file_path)
 
     output = class_name[np.argmax(pred[0])]
 

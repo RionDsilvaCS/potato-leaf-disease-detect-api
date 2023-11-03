@@ -8,7 +8,6 @@
 # fastapi==0.104.1
 python-multipart
 Pillow
-os-sys
 spacy-lookups-data
 uvicorn
 fastapi
