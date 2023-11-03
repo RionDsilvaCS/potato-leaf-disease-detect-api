@@ -5,3 +5,4 @@ tensorflow==2.12.0
 python-multipart==0.0.6
 Pillow==9.2.0
 os-sys==2.1.4
+spacy-lookups-data==1.0.5
