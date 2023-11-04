@@ -1,4 +1,5 @@
 from fastapi import FastAPI, UploadFile, File
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from secrets import token_hex
 import pathlib
@@ -10,6 +11,20 @@ import numpy as np
 
 app = FastAPI()
 
+origins = [
+    "https://potato-leaf-disease-detect-api-production.up.railway.app",
+    "https://potato-leaf-disease-detect-api-production.up.railway.app/predict",
+    "http://localhost",
+    "http://localhost:8080",
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 model = load_model("Potato-Disease-Classification.h5")
 
