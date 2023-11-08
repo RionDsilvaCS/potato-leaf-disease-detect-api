@@ -16,6 +16,7 @@ origins = [
     "https://potato-leaf-disease-detect-api-production.up.railway.app/predict",
     "http://localhost",
     "http://localhost:8080",
+    "http://localhost:5173/",
 ]
 
 app.add_middleware(
