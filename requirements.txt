@@ -3,4 +3,4 @@ Pillow
 spacy-lookups-data
 uvicorn
 fastapi
-tensorflow==2.12.0
+tensorflow==2.11.0
